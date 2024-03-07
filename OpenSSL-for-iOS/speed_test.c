@@ -15,7 +15,7 @@
 #include <openssl/objects.h>
 #include <openssl/rand.h>
 #include "platform_measurement_utils.h"
-#include "key_pair.h"
+#include "praos_vrf.h"
 
 void handleErrors(const char *msg) {
     fprintf(stderr, "Error: %s\n", msg);
@@ -95,6 +95,7 @@ double praos_vrf_speed(int num_reps) {
     key_pair kp;
     
     key_pair_generate(group, &kp, ctx);
+    
     
     //    void dh_key_pair_free(dh_key_pair *kp);
     BN_CTX_free(ctx);
