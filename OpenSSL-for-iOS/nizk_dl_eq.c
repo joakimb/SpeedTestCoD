@@ -76,10 +76,14 @@ int nizk_dl_eq_verify(const EC_GROUP *group, const EC_POINT *a, const EC_POINT *
     EC_POINTs_mul(group, Ra_prime, NULL, 2, a_points, bns, ctx); // no wrapper for EC_POINTs_mul
     int ret = point_cmp(group, Ra_prime, pi->Ra, ctx);
     point_free(Ra_prime);
+    
+    printf("HERETOO\n");
     if (ret == 1) { // not equal
         bn_free(c);
         return 1; // verification failed
     }
+    
+    printf("HERETOO1\n");
 
     /* check if pi->Rb = [pi->z]b + [c]B */
     EC_POINT *Rb_prime = point_new(group);
