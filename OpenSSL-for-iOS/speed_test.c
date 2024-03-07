@@ -60,7 +60,7 @@ double ecdsa_speed(int num_reps) {
             handleErrors("Failed to sign the message");
         }
     }
-    
+    //TODO change measurement to verifying of signatures...
     platform_time_type end = platform_utils_get_wall_time();
     double sig_speed = platform_utils_get_wall_time_diff(start, end);
     
