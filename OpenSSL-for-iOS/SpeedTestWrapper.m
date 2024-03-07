@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SpeedTestWrapper.h"
-#import "SigSpeed.h"
+#import "speed_test.h"
 
 @implementation SpeedTestWrapper
 

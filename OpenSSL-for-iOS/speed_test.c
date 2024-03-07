@@ -6,7 +6,7 @@
 //  Copyright © 2024 Felix Schulze. All rights reserved.
 //
 
-#include "SigSpeed.h"
+#include "speed_test.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +15,7 @@
 #include <openssl/objects.h>
 #include <openssl/rand.h>
 #include "platform_measurement_utils.h"
+#include "key_pair.h"
 
 void handleErrors(const char *msg) {
     fprintf(stderr, "Error: %s\n", msg);
@@ -85,4 +86,17 @@ double ecdsa_speed(int num_reps) {
     EC_KEY_free(ec_key);
     
     return sig_speed;
+}
+
+double praos_vrf_speed(int num_reps) {
+    
+    const EC_GROUP *group = get0_group();
+    BN_CTX *ctx = BN_CTX_new();
+    key_pair kp;
+    
+    key_pair_generate(group, &kp, ctx);
+    
+    //    void dh_key_pair_free(dh_key_pair *kp);
+    BN_CTX_free(ctx);
+
 }
