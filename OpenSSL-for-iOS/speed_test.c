@@ -91,8 +91,17 @@ double praos_vrf_speed(int num_reps) {
     nizk_dl_eq_proof pi;
     
     prove_vrf(group, seed, &rand_val, u, &pi, &kp, ctx);
-   
-    int ver = verify_vrf(group, seed, rand_val, u, &pi, kp.pub, ctx);
+    
+    int ver;
+    
+    platform_time_type start = platform_utils_get_wall_time();
+    for(int i = 0; i < num_reps; i++) {
+        ver = verify_vrf(group, seed, rand_val, u, &pi, kp.pub, ctx);
+    }
+    
+    platform_time_type end = platform_utils_get_wall_time();
+    double vrf_speed = platform_utils_get_wall_time_diff(start, end);
+    
     if (ver == 0){
         printf("VRF verified successfully!\n");
     } else {
@@ -106,6 +115,6 @@ double praos_vrf_speed(int num_reps) {
     bn_free(rand_val);
     nizk_dl_eq_proof_free(&pi);
 
-    return 1;
+    return vrf_speed;
 
 }
