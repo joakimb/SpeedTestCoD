@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "SpeedTestWrapper.h"
+#import "SigSpeed.h"
 
 @implementation SpeedTestWrapper
 
 
 + (void) performanceTest{
-    NSLog(@"Tester");
+    NSLog(@"Sig ECDSA speed: %f", ecdsa_speed(20000));
 }
 
 @end
