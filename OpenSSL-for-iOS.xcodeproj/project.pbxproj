@@ -10,6 +10,10 @@
 		15E4C6592B98BBA8007BCF29 /* SpeedTestWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6582B98BBA8007BCF29 /* SpeedTestWrapper.m */; };
 		15E4C65D2B999CAE007BCF29 /* SigSpeed.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C65C2B999CAE007BCF29 /* SigSpeed.c */; };
 		15E4C6602B99A132007BCF29 /* platform_measurement_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */; };
+		15E4C6642B99AA09007BCF29 /* praos_vrf.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6632B99AA09007BCF29 /* praos_vrf.c */; };
+		15E4C6672B99B615007BCF29 /* nizk_dl_eq.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */; };
+		15E4C66A2B99B63F007BCF29 /* P256.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6682B99B63F007BCF29 /* P256.c */; };
+		15E4C66D2B99B6B3007BCF29 /* dh_key_pair.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C66C2B99B6B3007BCF29 /* dh_key_pair.c */; };
 		2A1DDC8F1BFB1DF600F7722A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1DDC8E1BFB1DF600F7722A /* ViewController.xib */; };
 		2A3821001BFB5EEB00328618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3820FF1BFB5EEB00328618 /* AppDelegate.swift */; };
 		2A3821021BFB607A00328618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3821011BFB607A00328618 /* ViewController.swift */; };
@@ -51,6 +55,14 @@
 		15E4C65E2B99A125007BCF29 /* platform_measurement_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_measurement_utils.h; sourceTree = "<group>"; };
 		15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = platform_measurement_utils.c; sourceTree = "<group>"; };
 		15E4C6612B99A192007BCF29 /* config_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config_platform.h; sourceTree = "<group>"; };
+		15E4C6622B99AA09007BCF29 /* praos_vrf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praos_vrf.h; sourceTree = "<group>"; };
+		15E4C6632B99AA09007BCF29 /* praos_vrf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = praos_vrf.c; sourceTree = "<group>"; };
+		15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nizk_dl_eq.c; sourceTree = "<group>"; };
+		15E4C6662B99B615007BCF29 /* nizk_dl_eq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nizk_dl_eq.h; sourceTree = "<group>"; };
+		15E4C6682B99B63F007BCF29 /* P256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = P256.c; sourceTree = "<group>"; };
+		15E4C6692B99B63F007BCF29 /* P256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P256.h; sourceTree = "<group>"; };
+		15E4C66B2B99B6B3007BCF29 /* dh_key_pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh_key_pair.h; sourceTree = "<group>"; };
+		15E4C66C2B99B6B3007BCF29 /* dh_key_pair.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dh_key_pair.c; sourceTree = "<group>"; };
 		2A1DDC8E1BFB1DF600F7722A /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		2A3820FE1BFB5EEA00328618 /* OpenSSL-for-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenSSL-for-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A3820FF1BFB5EEB00328618 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +188,14 @@
 				15E4C65E2B99A125007BCF29 /* platform_measurement_utils.h */,
 				15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */,
 				15E4C6612B99A192007BCF29 /* config_platform.h */,
+				15E4C6622B99AA09007BCF29 /* praos_vrf.h */,
+				15E4C6632B99AA09007BCF29 /* praos_vrf.c */,
+				15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */,
+				15E4C6662B99B615007BCF29 /* nizk_dl_eq.h */,
+				15E4C6682B99B63F007BCF29 /* P256.c */,
+				15E4C6692B99B63F007BCF29 /* P256.h */,
+				15E4C66C2B99B6B3007BCF29 /* dh_key_pair.c */,
+				15E4C66B2B99B6B3007BCF29 /* dh_key_pair.h */,
 			);
 			path = "OpenSSL-for-iOS";
 			sourceTree = "<group>";
@@ -381,8 +401,12 @@
 			files = (
 				2A3821001BFB5EEB00328618 /* AppDelegate.swift in Sources */,
 				2A3821021BFB607A00328618 /* ViewController.swift in Sources */,
+				15E4C6642B99AA09007BCF29 /* praos_vrf.c in Sources */,
+				15E4C66A2B99B63F007BCF29 /* P256.c in Sources */,
 				15E4C65D2B999CAE007BCF29 /* SigSpeed.c in Sources */,
+				15E4C66D2B99B6B3007BCF29 /* dh_key_pair.c in Sources */,
 				15E4C6602B99A132007BCF29 /* platform_measurement_utils.c in Sources */,
+				15E4C6672B99B615007BCF29 /* nizk_dl_eq.c in Sources */,
 				D1E978031547EE765CD39AD2 /* FSOpenSSL.m in Sources */,
 				15E4C6592B98BBA8007BCF29 /* SpeedTestWrapper.m in Sources */,
 			);
@@ -584,12 +608,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = N85JY62UHJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSSL-for-iOS/OpenSSL-for-iOS-Prefix.pch";
 				INFOPLIST_FILE = "OpenSSL-for-iOS/OpenSSL-for-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.felixschulze.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = test.sdf.se;
 				PRODUCT_NAME = "OpenSSL-for-iOS";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenSSL-for-iOS/OpenSSL-for-iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -605,12 +630,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = N85JY62UHJ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenSSL-for-iOS/OpenSSL-for-iOS-Prefix.pch";
 				INFOPLIST_FILE = "OpenSSL-for-iOS/OpenSSL-for-iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.felixschulze.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = test.sdf.se;
 				PRODUCT_NAME = "OpenSSL-for-iOS";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenSSL-for-iOS/OpenSSL-for-iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
