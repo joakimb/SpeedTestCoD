@@ -96,10 +96,12 @@ double praos_vrf_speed(int num_reps) {
     
     key_pair_generate(group, &kp, ctx);
     BIGNUM *seed = bn_random(get0_order(group), ctx);
-    BIGNUM *rand_val = bn_new();
+    BIGNUM *rand_val;// = bn_new();
     EC_POINT *u = point_new(group);
     nizk_dl_eq_proof pi;
-    prove_vrf(group, seed, rand_val, u, &pi, &kp, ctx);
+    
+    prove_vrf(group, seed, &rand_val, u, &pi, &kp, ctx);
+   
     int ver = verify_vrf(group, seed, rand_val, u, &pi, kp.pub, ctx);
     if (ver == 0){
         printf("VRF verified successfully!\n");
