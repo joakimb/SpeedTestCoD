@@ -10,7 +10,6 @@
 		15E4C6592B98BBA8007BCF29 /* SpeedTestWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6582B98BBA8007BCF29 /* SpeedTestWrapper.m */; };
 		15E4C65D2B999CAE007BCF29 /* speed_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C65C2B999CAE007BCF29 /* speed_test.c */; };
 		15E4C6602B99A132007BCF29 /* platform_measurement_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */; };
-		15E4C6642B99AA09007BCF29 /* praos_vrf.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6632B99AA09007BCF29 /* praos_vrf.c */; };
 		15E4C6672B99B615007BCF29 /* nizk_dl_eq.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */; };
 		15E4C66A2B99B63F007BCF29 /* P256.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C6682B99B63F007BCF29 /* P256.c */; };
 		15E4C66D2B99B6B3007BCF29 /* key_pair.c in Sources */ = {isa = PBXBuildFile; fileRef = 15E4C66C2B99B6B3007BCF29 /* key_pair.c */; };
@@ -56,8 +55,6 @@
 		15E4C65E2B99A125007BCF29 /* platform_measurement_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_measurement_utils.h; sourceTree = "<group>"; };
 		15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = platform_measurement_utils.c; sourceTree = "<group>"; };
 		15E4C6612B99A192007BCF29 /* config_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config_platform.h; sourceTree = "<group>"; };
-		15E4C6622B99AA09007BCF29 /* praos_vrf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = praos_vrf.h; sourceTree = "<group>"; };
-		15E4C6632B99AA09007BCF29 /* praos_vrf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = praos_vrf.c; sourceTree = "<group>"; };
 		15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nizk_dl_eq.c; sourceTree = "<group>"; };
 		15E4C6662B99B615007BCF29 /* nizk_dl_eq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nizk_dl_eq.h; sourceTree = "<group>"; };
 		15E4C6682B99B63F007BCF29 /* P256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = P256.c; sourceTree = "<group>"; };
@@ -191,8 +188,6 @@
 				15E4C65E2B99A125007BCF29 /* platform_measurement_utils.h */,
 				15E4C65F2B99A132007BCF29 /* platform_measurement_utils.c */,
 				15E4C6612B99A192007BCF29 /* config_platform.h */,
-				15E4C6622B99AA09007BCF29 /* praos_vrf.h */,
-				15E4C6632B99AA09007BCF29 /* praos_vrf.c */,
 				15E4C6652B99B615007BCF29 /* nizk_dl_eq.c */,
 				15E4C6662B99B615007BCF29 /* nizk_dl_eq.h */,
 				15E4C6682B99B63F007BCF29 /* P256.c */,
@@ -407,7 +402,6 @@
 				2A3821001BFB5EEB00328618 /* AppDelegate.swift in Sources */,
 				15E4C6702B99D388007BCF29 /* openssl_hashing_tools.c in Sources */,
 				2A3821021BFB607A00328618 /* ViewController.swift in Sources */,
-				15E4C6642B99AA09007BCF29 /* praos_vrf.c in Sources */,
 				15E4C66A2B99B63F007BCF29 /* P256.c in Sources */,
 				15E4C65D2B999CAE007BCF29 /* speed_test.c in Sources */,
 				15E4C66D2B99B6B3007BCF29 /* key_pair.c in Sources */,
