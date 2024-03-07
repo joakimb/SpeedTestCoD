@@ -39,12 +39,25 @@ void prove_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *randval, EC_POINT *u
     //WE ARE NOW USING ONLY ONE HASH FUNCTION, INVESTIGATE SECURITY NEED FoR TWO
     
     
-//    point_free(u);
     point_free(seed_point);
     point_free(hash_seed_point);
     bn_free(hash_seed);
 }
 
-void verify_vrf(BIGNUM *seed, BIGNUM *randval, nizk_dl_eq_proof *pi, EC_POINT *pub_key) {
+int verify_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *randval, EC_POINT *u, nizk_dl_eq_proof *pi, EC_POINT *pub_key, BN_CTX *ctx) {
     
+    EC_POINT *seed_point = bn2point(group, seed, ctx); //optimize?
+    BIGNUM *hash_seed = openssl_hash_bn2bn(seed);//optimize?
+    EC_POINT *hash_seed_point = bn2point(group, hash_seed, ctx);//optimize?
+    BIGNUM *rand_val_calc = openssl_hash_points2bn(group, ctx, 2, seed_point, u);
+    if (0 != BN_cmp(randval, rand_val_calc)) {//cmp outputs 0 if equal
+        return 1;//return false
+    }
+    
+    int val_proof = nizk_dl_eq_verify(group, hash_seed_point, u, get0_generator(group), pub_key, pi, ctx);
+    
+    point_free(seed_point);
+    bn_free(hash_seed);
+    point_free(hash_seed_point);
+    return val_proof;//returns 0 on successful validation
 }

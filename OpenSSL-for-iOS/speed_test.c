@@ -100,13 +100,19 @@ double praos_vrf_speed(int num_reps) {
     EC_POINT *u = point_new(group);
     nizk_dl_eq_proof pi;
     prove_vrf(group, seed, rand_val, u, &pi, &kp, ctx);
-    
+    int ver = verify_vrf(group, seed, rand_val, u, &pi, kp.pub, ctx);
+    if (ver == 0){
+        printf("VRF verified successfully!\n");
+    } else {
+        printf("VRF FAILED to verify!\n");
+    }
     
     //    void dh_key_pair_free(dh_key_pair *kp);
     BN_CTX_free(ctx);
     point_free(u);
     bn_free(seed);
     bn_free(rand_val);
+    nizk_dl_eq_proof_free(&pi);
 
     return 1;
 
