@@ -22,14 +22,6 @@ void handleErrors(const char *msg) {
     exit(EXIT_FAILURE);
 }
 
-void printBN(const BIGNUM *bn) {
-    char *hex = BN_bn2hex(bn);
-    if (!hex) {
-        handleErrors("Failed to convert BIGNUM to hex");
-    }
-    printf("Private Key (hex): %s\n", hex);
-    OPENSSL_free(hex);
-}
 
 double ecdsa_speed(int num_reps) {
     
@@ -46,8 +38,6 @@ double ecdsa_speed(int num_reps) {
     
     // Get the private key
     const BIGNUM *priv_key = EC_KEY_get0_private_key(ec_key);
-    
-    printBN(priv_key);
     
     // Create the ECDSA signature context
     ECDSA_SIG *signature;

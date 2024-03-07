@@ -35,17 +35,6 @@ void prove_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM **randval, EC_POINT *
     
     //nizk_dl_eq_prove(const EC_GROUP *group, const BIGNUM *exp, const EC_POINT *a, const EC_POINT *A, const EC_POINT *b, const EC_POINT *B, nizk_dl_eq_proof *pi, BN_CTX *ctx)
     nizk_dl_eq_prove(group, kp->priv, hash_seed_point, u, get0_generator(group), kp->pub, pi, ctx);
-    printf("valsprove: \n");
-    point_print(group, u, ctx);
-    printf("\n");
-    point_print(group, kp->pub, ctx);
-    printf("\n");
-    point_print(group, pi->Ra, ctx);
-    printf("\n");
-    point_print(group, pi->Rb, ctx);
-    printf("\n");
-    bn_print(pi->z);
-    printf("\n");
     
     //WE ARE NOW USING ONLY ONE HASH FUNCTION, INVESTIGATE SECURITY NEED FoR TWO
     
@@ -65,23 +54,8 @@ int verify_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *randval, EC_POINT *u
     if (0 != BN_cmp(randval, rand_val_calc)) {//cmp outputs 0 if equal
         return 1;//return false
     }
-    printf("HERERE\n");
-    
-    printf("valsverif: \n");
-    point_print(group, u, ctx);
-     printf("\n");
-    point_print(group, pub_key, ctx);
-    printf("\n");
-    point_print(group, pi->Ra, ctx);
-    printf("\n");
-    point_print(group, pi->Rb, ctx);
-    printf("\n");
-    bn_print(pi->z);
-    printf("\n");
-   
     
     int val_proof = nizk_dl_eq_verify(group, hash_seed_point, u, get0_generator(group), pub_key, pi, ctx);
-    printf("val_proof: %d\n",val_proof);
     
     point_free(seed_point);
     bn_free(hash_seed);
