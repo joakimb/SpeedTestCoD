@@ -98,7 +98,7 @@ double praos_vrf_speed(int num_reps) {
     BIGNUM *seed = bn_random(get0_order(group), ctx);
     BIGNUM *vrf_eval = bn_new();
     nizk_dl_eq_proof pi;
-    prove_vrf(group, seed, vrf_eval, &pi, ctx);
+    prove_vrf(group, seed, vrf_eval, &pi, &kp, ctx);
     
     
     //    void dh_key_pair_free(dh_key_pair *kp);

@@ -17,5 +17,5 @@ typedef struct {
 
 void key_pair_free(key_pair *kp);
 void key_pair_generate(const EC_GROUP *group, key_pair *kp, BN_CTX *ctx);
-void prove_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *output, nizk_dl_eq_proof *pi, BN_CTX *ctx);
+void prove_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *output, nizk_dl_eq_proof *pi, key_pair *kp, BN_CTX *ctx);
 #endif /* DH_KEY_PAIR_H */
