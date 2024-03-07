@@ -20,23 +20,23 @@ void key_pair_generate(const EC_GROUP *group, key_pair *kp, BN_CTX *ctx) {
 }
 
 //output evaluation and proof on input a seed
-void prove_vrf(const EC_GROUP *group, BIGNUM *seed, EC_POINT *output, nizk_dl_eq_proof *pi, BN_CTX *ctx) {
+void prove_vrf(const EC_GROUP *group, BIGNUM *seed, BIGNUM *output, nizk_dl_eq_proof *pi, BN_CTX *ctx) {
     //hash_seed = H'(seed)
     BIGNUM *hash_seed = openssl_hash_bn2bn(seed);
     //u = hash_seed^k
-    output = bn2point(group, hash_seed, ctx);
-    point_mul(group, output, hash_seed, output, ctx);
+    EC_POINT *u = bn2point(group, hash_seed, ctx);
+    point_mul(group, u, hash_seed, u, ctx);
     //y = H(m,u):
     //interpret m into a point first for easier hashing
     EC_POINT *seed_point = bn2point(group, seed, ctx);
     //then use hash of points interface
-    //BIGNUM *openssl_hash_points2bn(const EC_GROUP *group, BN_CTX *bn_ctx, int num_points,...);
+    output = openssl_hash_points2bn(group, ctx, 2, seed_point, u);
     //continue coding here, follwoing spec from praos paper.
     
     //WE ARE NOW USING ONLY ONE HASH FUNCTION, INVESTIGATE SECURITY NEED FoR TWO
     
     
-    
-    bn_free(seed_point);
+    point_free(u);
+    point_free(seed_point);
     bn_free(hash_seed);
 }
