@@ -96,15 +96,17 @@ double praos_vrf_speed(int num_reps) {
     
     key_pair_generate(group, &kp, ctx);
     BIGNUM *seed = bn_random(get0_order(group), ctx);
-    BIGNUM *vrf_eval = bn_new();
+    BIGNUM *rand_val = bn_new();
+    EC_POINT *u = point_new(group);
     nizk_dl_eq_proof pi;
-    prove_vrf(group, seed, vrf_eval, &pi, &kp, ctx);
+    prove_vrf(group, seed, rand_val, u, &pi, &kp, ctx);
     
     
     //    void dh_key_pair_free(dh_key_pair *kp);
     BN_CTX_free(ctx);
+    point_free(u);
     bn_free(seed);
-    bn_free(vrf_eval);
+    bn_free(rand_val);
 
     return 1;
 
