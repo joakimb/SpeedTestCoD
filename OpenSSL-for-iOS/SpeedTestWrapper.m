@@ -14,8 +14,8 @@
 
 
 + (void) performanceTest{
-    NSLog(@"Sig ECDSA speed: %f", ecdsa_speed(20000));
-    NSLog(@"VRF speed: %f", praos_vrf_speed(20000));
+    NSLog(@"Sig ECDSA speed: %f", ecdsa_speed(10000));
+    NSLog(@"VRF speed: %f", praos_vrf_speed(10000));
 }
 
 @end

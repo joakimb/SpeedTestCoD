@@ -53,23 +53,22 @@ double ecdsa_speed(int num_reps) {
     platform_time_type start = platform_utils_get_wall_time();
     
 
+    // Sign the message
+    signature = ECDSA_do_sign(digest, sizeof(digest), ec_key);
+    if (!signature) {
+        handleErrors("Failed to sign the message");
+    }
+    
     for(int i = 0; i < num_reps; i++) {
-        // Sign the message
-        signature = ECDSA_do_sign(digest, sizeof(digest), ec_key);
-        if (!signature) {
-            handleErrors("Failed to sign the message");
+        // Verify the signature
+        if (ECDSA_do_verify(digest, sizeof(digest), signature, ec_key) != 1) {
+            handleErrors("Failed to verify the signature");
         }
     }
-    //TODO change measurement to verifying of signatures...
+    
     platform_time_type end = platform_utils_get_wall_time();
     double sig_speed = platform_utils_get_wall_time_diff(start, end);
     
-    // Verify the signature
-    if (ECDSA_do_verify(digest, sizeof(digest), signature, ec_key) != 1) {
-        handleErrors("Failed to verify the signature");
-    } else {
-        printf("Signature verified successfully!\n");
-    }
     
     // Clean up
     ECDSA_SIG_free(signature);
