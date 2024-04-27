@@ -1,8 +1,7 @@
 //
 //  nizk_dl_eq.h
 //  OpenSSL-for-iOS
-//
-//  Created by Paul Stankovski Wagner on 2023-09-29.
+
 //
 
 #ifndef NIZK_DL_EQ_H

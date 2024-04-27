@@ -1,8 +1,6 @@
 //
 //  openssl_hashing_tools.h
-//
-//  Created by Paul Stankovski Wagner on 2023-09-27.
-//
+
 
 #ifndef OPENSSL_HASHING_TOOLS_H
 #define OPENSSL_HASHING_TOOLS_H

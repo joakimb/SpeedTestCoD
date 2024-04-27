@@ -2,7 +2,7 @@
 //  dh_key_pair.c
 //  OpenSSL-for-iOS
 //
-//  Created by Paul Stankovski Wagner on 2023-10-07.
+
 //
 
 #include "praos_vrf.h"

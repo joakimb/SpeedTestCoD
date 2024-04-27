@@ -2,8 +2,7 @@
 //  SpeedTestWrapper.h
 //  OpenSSL-for-iOS
 //
-//  Created by Joakim Brorsson on 2024-03-06.
-//  Copyright © 2024 Felix Schulze. All rights reserved.
+
 //
 
 #ifndef SpeedTestWrapper_h

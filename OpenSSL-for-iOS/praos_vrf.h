@@ -2,7 +2,6 @@
 //  dh_key_pair.h
 //  OpenSSL-for-iOS
 //
-//  Created by Paul Stankovski Wagner on 2023-10-07.
 //
 #ifndef DH_KEY_PAIR_H
 #define DH_KEY_PAIR_H

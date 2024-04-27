@@ -2,7 +2,6 @@
 //  P256.c
 //  OpenSSL-for-iOS
 //
-//  Created by Joakim Brorsson on 2023-09-07.
 //
 #include "P256.h"
 #include <assert.h>

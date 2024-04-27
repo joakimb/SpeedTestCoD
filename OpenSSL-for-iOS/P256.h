@@ -2,7 +2,6 @@
 //  P256.h
 //  OpenSSL-for-iOS
 //
-//  Created by Joakim Brorsson on 2023-09-07.
 //
 
 #ifndef P256_H

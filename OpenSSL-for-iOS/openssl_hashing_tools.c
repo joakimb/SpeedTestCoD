@@ -1,7 +1,6 @@
 //
 //  openssl_hashing_tools.c
 //
-//  Created by Paul Stankovski Wagner on 2023-09-27.
 //
 #include <stdio.h>
 #include <stdarg.h>

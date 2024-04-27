@@ -2,8 +2,6 @@
 //  nizk_dl_eq.c
 //  OpenSSL-for-iOS
 //
-//  Created by Paul Stankovski Wagner on 2023-09-29.
-//
 #include "nizk_dl_eq.h"
 #include <assert.h>
 #include "openssl_hashing_tools.h"
